@@ -19,7 +19,7 @@ in
     };
     adminuser = lib.mkOption {
       type = lib.types.str;
-      default = "notthebee";
+      default = "murmeldin";
     };
     configDir = lib.mkOption {
       type = lib.types.str;

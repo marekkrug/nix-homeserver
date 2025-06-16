@@ -122,5 +122,5 @@ in
     };
   };
 
-  meta.maintainers = with lib.maintainers; [ notthebee ];
+  meta.maintainers = with lib.maintainers; [ murmeldin ];
 }

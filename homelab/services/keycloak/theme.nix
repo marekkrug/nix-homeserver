@@ -1,9 +1,9 @@
 { stdenv }:
 stdenv.mkDerivation rec {
-  name = "keycloak_theme_notthebee";
+  name = "keycloak_theme_murmeldin";
   version = "1.0";
 
-  src = ./themes/notthebee;
+  src = ./themes/murmeldin;
 
   nativeBuildInputs = [ ];
   buildInputs = [ ];

@@ -105,7 +105,7 @@ in
     home = "/var/www/notthebe.ee";
     group = "deploy";
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEWW1IHfAeAzDEQ6lun+dgl0Ble8fVT5+R7uoeobtLvn notthebee@meredith"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEWW1IHfAeAzDEQ6lun+dgl0Ble8fVT5+R7uoeobtLvn murmeldin@meredith"
     ];
   };
 

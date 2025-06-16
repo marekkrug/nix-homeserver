@@ -15,7 +15,6 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -34,7 +33,7 @@
       flake = false;
     };
     auto-aspm = {
-      url = "github:notthebee/AutoASPM";
+      url = "github:murmeldin/AutoASPM";
       flake = false;
     };
     agenix = {
@@ -54,7 +53,7 @@
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     adios-bot = {
-      url = "github:notthebee/adiosbot";
+      url = "github:murmeldin/adiosbot";
       flake = false;
     };
     nix-index-database = {
@@ -62,7 +61,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     secrets = {
-      url = "git+ssh://git@github.com/notthebee/nix-private.git";
+      url = "git+ssh://git@github.com/murmeldin/nix-private.git";
       flake = false;
     };
     jovian = {
@@ -114,7 +113,7 @@
         ./homelab
         inputs.home-manager.nixosModules.home-manager
       ])
-      (mkNixos "emily" inputs.nixpkgs [
+      (mkNixos "nixos-homeserver" inputs.nixpkgs [
         ./modules/zfs-root
         ./modules/tailscale
         ./modules/adios-bot

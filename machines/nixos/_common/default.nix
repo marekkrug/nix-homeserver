@@ -34,7 +34,7 @@
   time.timeZone = "Europe/Berlin";
 
   users.users = {
-    notthebee = {
+    murmeldin = {
       hashedPasswordFile = config.age.secrets.hashedUserPassword.path;
     };
     root = {

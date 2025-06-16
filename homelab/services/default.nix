@@ -69,31 +69,31 @@
   };
 
   imports = [
-    ./backup
-    ./arr/prowlarr
-    ./arr/bazarr
-    ./arr/sonarr
-    ./arr/radarr
+    #./backup
+    #./arr/prowlarr
+    #./arr/bazarr
+    #./arr/sonarr
+    #./arr/radarr
     #./arr/lidarr
-    ./audiobookshelf
-    ./deluge
+    #./audiobookshelf
+    #./deluge
     #./deemix
-    ./homepage
-    ./immich
-    ./jellyfin
-    ./keycloak
-    ./microbin
-    ./miniflux
+    #./homepage
+    #./immich
+    #./jellyfin
+    #./keycloak
+    #./microbin
+    #./miniflux
     #./navidrome
-    ./nextcloud
-    ./smarthome/homeassistant
-    ./smarthome/raspberrymatic
-    ./paperless-ngx
-    ./radicale
-    ./sabnzbd
+    #./nextcloud
+    #./smarthome/homeassistant
+    #./smarthome/raspberrymatic
+    #./paperless-ngx
+    #./radicale
+    #./sabnzbd
     #./slskd
     ./uptime-kuma
-    ./vaultwarden
-    ./wireguard-netns
+    #./vaultwarden
+    #./wireguard-netns
   ];
 }

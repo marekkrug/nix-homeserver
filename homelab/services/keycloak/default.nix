@@ -64,12 +64,12 @@ in
 
     environment.systemPackages = [
       pkgs.keycloak
-      pkgs.custom_keycloak_themes.notthebee
+      pkgs.custom_keycloak_themes.murmeldin
     ];
     nixpkgs.overlays = [
       (final: prev: {
         custom_keycloak_themes = {
-          notthebee = pkgs.callPackage ./theme.nix { };
+          murmeldin = pkgs.callPackage ./theme.nix { };
         };
         custom_keycloak_plugins = {
           keycloak_spi_trusted_device = pkgs.callPackage ./trusted-device.nix { };
@@ -82,7 +82,7 @@ in
       initialAdminPassword = "schneke123";
       database.passwordFile = cfg.dbPasswordFile;
       themes = {
-        notthebee = pkgs.custom_keycloak_themes.notthebee;
+        murmeldin = pkgs.custom_keycloak_themes.murmeldin;
       };
       plugins = [ pkgs.custom_keycloak_plugins.keycloak_spi_trusted_device ];
       settings = {

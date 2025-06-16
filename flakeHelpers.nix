@@ -5,11 +5,11 @@ let
     home-manager.extraSpecialArgs = {
       inherit inputs;
     };
-    home-manager.users.notthebee.imports = [
+    home-manager.users.murmeldin.imports = [
       inputs.agenix.homeManagerModules.default
       inputs.nix-index-database.hmModules.nix-index
-      ./users/notthebee/dots.nix
-      ./users/notthebee/age.nix
+      ./users/murmeldin/dots.nix
+      ./users/murmeldin/age.nix
     ] ++ extraImports;
     home-manager.backupFileExtension = "bak";
     home-manager.useUserPackages = userPackages;
@@ -29,7 +29,7 @@ in
         ./machines/darwin/${machineHostname}
         inputs.home-manager-unstable.darwinModules.home-manager
         (nixpkgsVersion.lib.attrsets.recursiveUpdate (homeManagerCfg true extraHmModules) {
-          home-manager.users.notthebee.home.homeDirectory = nixpkgsVersion.lib.mkForce "/Users/notthebee";
+          home-manager.users.murmeldin.home.homeDirectory = nixpkgsVersion.lib.mkForce "/Users/murmeldin";
         })
       ];
     };
@@ -39,7 +39,7 @@ in
       hostname = machineHostname;
       profiles.system = {
         user = "root";
-        sshUser = "notthebee";
+        sshUser = "murmeldin";
         path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos nixosConfigurations.${machineHostname};
       };
     };
@@ -57,7 +57,7 @@ in
         ./modules/auto-aspm
         ./modules/mover
         inputs.agenix.nixosModules.default
-        ./users/notthebee
+        ./users/murmeldin
         (homeManagerCfg false [ ])
       ] ++ extraModules;
     };

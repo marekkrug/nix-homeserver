@@ -5,13 +5,13 @@
       "locked": {
         "lastModified": 1737711654,
         "narHash": "sha256-k+27RkjBR83kv8JFxYMwOR1EbjZgfW6fmf5n1D66DYQ=",
-        "owner": "notthebee",
+        "owner": "murmeldin",
         "repo": "adiosbot",
         "rev": "6d9d8db317285406c296182eccfc9c104e7535c8",
         "type": "github"
       },
       "original": {
-        "owner": "notthebee",
+        "owner": "murmeldin",
         "repo": "adiosbot",
         "type": "github"
       }
@@ -91,13 +91,13 @@
       "locked": {
         "lastModified": 1734075490,
         "narHash": "sha256-rbvqaCddVTBpisc+Ow4IF0FfWJ4//lNsV3gY55w6AP0=",
-        "owner": "notthebee",
+        "owner": "murmeldin",
         "repo": "AutoASPM",
         "rev": "e3bbeb5a96a2fb24188a7e6be649e057ff1968c5",
         "type": "github"
       },
       "original": {
-        "owner": "notthebee",
+        "owner": "murmeldin",
         "repo": "AutoASPM",
         "type": "github"
       }
@@ -678,11 +678,11 @@
         "rev": "d679dd1c3ff8981f1efe2304d29b0e0ed09ecae1",
         "revCount": 63,
         "type": "git",
-        "url": "ssh://git@github.com/notthebee/nix-private.git"
+        "url": "ssh://git@github.com/murmeldin/nix-private.git"
       },
       "original": {
         "type": "git",
-        "url": "ssh://git@github.com/notthebee/nix-private.git"
+        "url": "ssh://git@github.com/murmeldin/nix-private.git"
       }
     },
     "systems": {
