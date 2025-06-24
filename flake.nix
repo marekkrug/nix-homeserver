@@ -33,7 +33,7 @@
       flake = false;
     };
     auto-aspm = {
-      url = "github:murmeldin/AutoASPM";
+      url = "github:notthebee/AutoASPM";
       flake = false;
     };
     agenix = {
@@ -53,7 +53,7 @@
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     adios-bot = {
-      url = "github:murmeldin/adiosbot";
+      url = "github:notthebee/adiosbot";
       flake = false;
     };
     nix-index-database = {
