@@ -1,4 +1,4 @@
 { config, pkgs, lib, ... }: 
 {
-  age.identityPaths = ["/Users/murmeldin/.ssh/murmeldin"];
+  age.identityPaths = ["/home/murmeldin/.ssh/murmeldin"];
 }

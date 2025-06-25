@@ -104,9 +104,9 @@ in
   ];
 
   services.duckdns = {
-    enable = true;
-    domainsFile = config.age.secrets.duckDNSDomain.path;
-    tokenFile = config.age.secrets.duckDNSToken.path;
+    enable = false; # nutze ich nicht
+    domainsFile = config.sops.secrets.duckDNSDomain;
+    tokenFile = config.sops.secrets.duckDNSToken;
   };
 
   systemd.services.hd-idle = {
@@ -124,7 +124,7 @@ in
   };
 
   services.hddfancontrol = {
-    enable = true;
+    enable = false; # TODO Was ist das genau?
     settings = {
       harddrives = {
         disks = hardDrives;
@@ -141,7 +141,7 @@ in
   system.autoUpgrade.enable = true;
 
   services.mover = {
-    enable = true;
+    enable = false;
     cacheArray = hl.mounts.fast;
     backingArray = hl.mounts.slow;
     user = hl.user;
@@ -176,12 +176,12 @@ in
   ];
 
   tg-notify = {
-    enable = true;
-    credentialsFile = config.age.secrets.tgNotifyCredentials.path;
+    enable = false; # TODO maybe reactivate
+    credentialsFile = config.sops.secrets.tgNotifyCredentials;
   };
 
   services.adiosBot = {
-    enable = true;
-    botTokenFile = config.age.secrets.adiosBotToken.path;
+    enable = false;
+    botTokenFile = config.sops.secrets.adiosBotToken;
   };
 }

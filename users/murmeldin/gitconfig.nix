@@ -12,8 +12,8 @@
 
   programs.git = {
     enable = true;
-    userName = "Wolfgang";
-    userEmail = "mail@weirdrescue.pw";
+    userName = "murmeldin";
+    userEmail = "git@marekkrug.de";
 
     extraConfig = {
       core = {
@@ -22,7 +22,7 @@
     };
     includes = [
       {
-        path = "~" + (lib.removePrefix "$HOME" config.age.secrets.gitIncludes.path);
+        path = "~" + (lib.removePrefix "$HOME" config.sops.secrets.gitIncludes.path);
         condition = "gitdir:~/Workspace/Projects/";
       }
     ];

@@ -40,17 +40,14 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    agenix-darwin = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
-    };
-    recyclarr-configs = {
+        recyclarr-configs = {
       url = "github:recyclarr/config-templates";
       flake = false;
     };
-    nix-darwin = {
-      url = "github:LnL7/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    # secrets management
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     adios-bot = {
       url = "github:notthebee/adiosbot";
@@ -59,10 +56,6 @@
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    secrets = {
-      url = "git+ssh://git@github.com/murmeldin/nix-private.git";
-      flake = false;
     };
     jovian = {
       url = "github:Jovian-Experiments/Jovian-NixOS";
@@ -77,7 +70,7 @@
   };
 
   outputs =
-    { flake-utils, nixpkgs, ... }@inputs:
+    { flake-utils, nixpkgs, sops-nix, ... }@inputs:
     let
       helpers = import ./flakeHelpers.nix inputs;
       inherit (helpers) mkMerge mkNixos mkDarwin;
@@ -97,41 +90,13 @@
           };
         }
       ))
-      (mkNixos "spencer" inputs.nixpkgs [
-        ./modules/notthebe.ee
-        ./homelab
-        inputs.home-manager.nixosModules.home-manager
-      ])
-      (mkNixos "maya" inputs.nixpkgs-unstable [
-        ./modules/ryzen-undervolt
-        ./modules/lgtv
-        inputs.jovian.nixosModules.default
-        inputs.home-manager-unstable.nixosModules.home-manager
-      ])
-      (mkNixos "alison" inputs.nixpkgs [
-        ./modules/zfs-root
-        ./homelab
-        inputs.home-manager.nixosModules.home-manager
-      ])
       (mkNixos "nixos-homeserver" inputs.nixpkgs [
         ./modules/zfs-root
         ./modules/tailscale
         ./modules/adios-bot
         ./homelab
+        sops-nix.nixosModules.sops
         inputs.home-manager.nixosModules.home-manager
       ])
-      (mkNixos "aria" inputs.nixpkgs [
-        ./modules/zfs-root
-        ./modules/tailscale
-        ./homelab
-        inputs.home-manager.nixosModules.home-manager
-      ])
-      (mkDarwin "meredith" inputs.nixpkgs-darwin
-        [
-          dots/tmux
-          dots/kitty
-        ]
-        [ ]
-      )
     ];
 }

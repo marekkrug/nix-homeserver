@@ -1,0 +1,7 @@
+keys:
+  - &murmeldin age1ucxvqge52x6lruamdx4pdagc760nsqact5ehpqj4xxrdpfpcnsksadse49
+creation_rules:
+  - path_regex: secrets/secrets.yaml$
+    key_groups:
+      - age:
+          - *murmeldin

@@ -13,7 +13,7 @@
 
   services.tailscale = {
     enable = true;
-    authKeyFile = config.age.secrets.tailscaleAuthKey.path;
+    authKeyFile = config.sops.secrets.tailscaleAuthKey;
     extraUpFlags =
       let
         advertisedRoute =
