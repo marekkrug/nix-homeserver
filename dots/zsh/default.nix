@@ -8,7 +8,7 @@
 {
   home.packages = with pkgs; [ grc ];
   age.secrets = lib.mkIf (pkgs.system == "aarch64-darwin") {
-    bwSession.file = "./secrets/bwSession.age";
+    bwSession.file = "/etc/nixos/secrets/bwSession.age";
   };
 
   programs = {

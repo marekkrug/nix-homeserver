@@ -97,7 +97,7 @@ in
     ./filesystems
     ./backup
     ./homelab
-    ./secrets
+    /etc/nixos/secrets
   ];
 
   services.duckdns = {

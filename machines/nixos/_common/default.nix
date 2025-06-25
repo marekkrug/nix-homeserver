@@ -7,7 +7,7 @@
 }:
 {
   age.secrets.hashedUserPassword = {
-    file = "./secrets/hashedUserPassword.age";
+    file = "/etc/nixos/secrets/hashedUserPassword.age";
   };
 
   system.stateVersion = "22.11";
@@ -27,8 +27,8 @@
   imports = [
     ./filesystems
     ./nix
-    ./secrets/networks.nix
-    ./secrets
+    /etc/nixos/secrets/networks.nix
+    /etc/nixos/secrets
   ];
 
   time.timeZone = "Europe/Berlin";

@@ -5,7 +5,7 @@
       inputs.sop-nix.nixosModules.sops
     ];
   sops = {
-    defaultSopsFile = ./secrets/secrets.yaml;
+    defaultSopsFile = /etc/nixos/secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
     age = {
       keyFile = "/home/murmeldin/.config/sops/age/keys.txt";
