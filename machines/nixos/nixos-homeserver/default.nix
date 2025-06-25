@@ -11,10 +11,7 @@ let
   nixos-homeserverIpAddress = lan.reservations.nixos-homeserver.Address;
   gatewayIpAddress = lan.cidr.v4;
   hardDrives = [
-    "/dev/disk/by-label/Data1"
-    "/dev/disk/by-label/Data2"
-    "/dev/disk/by-label/Data3"
-    "/dev/disk/by-label/Parity1"
+    "/dev/disk/by-label/nixos" # TODO: for later when adding new drives
   ];
 in
 {
