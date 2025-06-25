@@ -7,7 +7,7 @@
 }:
 {
   age.secrets.hashedUserPassword = {
-    file = "${inputs.secrets}/hashedUserPassword.age";
+    file = "./secrets/hashedUserPassword.age";
   };
 
   system.stateVersion = "22.11";
@@ -27,7 +27,7 @@
   imports = [
     ./filesystems
     ./nix
-    "${inputs.secrets}/networks.nix"
+    "./secrets/networks.nix"
     ./secrets
   ];
 

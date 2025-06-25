@@ -31,5 +31,6 @@
       duckDNSDomain = { };
       duckDNSToken = { };
       resticPassword = { };
+    };
   };
 }

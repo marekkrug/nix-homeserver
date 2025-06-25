@@ -36,11 +36,7 @@
       url = "github:notthebee/AutoASPM";
       flake = false;
     };
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-        recyclarr-configs = {
+    recyclarr-configs = {
       url = "github:recyclarr/config-templates";
       flake = false;
     };
