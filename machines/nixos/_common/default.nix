@@ -27,7 +27,7 @@
   imports = [
     ./filesystems
     ./nix
-    "./secrets/networks.nix"
+    ./secrets/networks.nix
     ./secrets
   ];
 
