@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  age.secrets = {
+  age.secrets = { # Secrets
     wireguardCredentials.file = "${inputs.secrets}/wireguardCredentials.age";
     borgBackupKey.file = "${inputs.secrets}/borgBackupKey.age";
     radicaleHtpasswd.file = "${inputs.secrets}/radicaleHtpasswd.age";
