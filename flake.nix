@@ -110,6 +110,7 @@
         ./modules/tailscale
         ./modules/adios-bot
         ./homelab
+        inputs.agenix.nixosModules.default
         inputs.home-manager.nixosModules.home-manager
       ])
       (mkNixos "aria" inputs.nixpkgs [
