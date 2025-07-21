@@ -89,34 +89,12 @@
           };
         }
       ))
-      (mkNixos "spencer" inputs.nixpkgs [
-        ./modules/notthebe.ee
-        ./homelab
-        inputs.home-manager.nixosModules.home-manager
-      ])
-      (mkNixos "maya" inputs.nixpkgs-unstable [
-        ./modules/ryzen-undervolt
-        ./modules/lgtv
-        inputs.jovian.nixosModules.default
-        inputs.home-manager-unstable.nixosModules.home-manager
-      ])
-      (mkNixos "alison" inputs.nixpkgs [
-        ./modules/zfs-root
-        ./homelab
-        inputs.home-manager.nixosModules.home-manager
-      ])
       (mkNixos "nixos-homeserver" inputs.nixpkgs [
         ./modules/zfs-root
         ./modules/tailscale
         ./modules/adios-bot
         ./homelab
         inputs.agenix.nixosModules.default
-        inputs.home-manager.nixosModules.home-manager
-      ])
-      (mkNixos "aria" inputs.nixpkgs [
-        ./modules/zfs-root
-        ./modules/tailscale
-        ./homelab
         inputs.home-manager.nixosModules.home-manager
       ])
     ];
