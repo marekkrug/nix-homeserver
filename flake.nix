@@ -40,17 +40,9 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    agenix-darwin = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
-    };
     recyclarr-configs = {
       url = "github:recyclarr/config-templates";
       flake = false;
-    };
-    nix-darwin = {
-      url = "github:LnL7/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     adios-bot = {
       url = "github:notthebee/adiosbot";
@@ -61,7 +53,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     secrets = {
-      url = "git+ssh://git@github.com:marekkrug/nix-private.git";
+      url = "git+ssh://git@github.com/marekkrug/nix-private.git";
       flake = false;
     };
     jovian = {
@@ -126,12 +118,5 @@
         ./homelab
         inputs.home-manager.nixosModules.home-manager
       ])
-      (mkDarwin "meredith" inputs.nixpkgs-darwin
-        [
-          dots/tmux
-          dots/kitty
-        ]
-        [ ]
-      )
     ];
 }
