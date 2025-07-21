@@ -26,7 +26,7 @@ in
     };
     url = lib.mkOption {
       type = lib.types.str;
-      default = "photos.${homelab.baseDomain}";
+      default = "immich.${homelab.baseDomain}";
     };
     homepage.name = lib.mkOption {
       type = lib.types.str;

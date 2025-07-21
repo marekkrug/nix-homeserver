@@ -68,7 +68,7 @@ in
     };
     hostId = "0730ae51";
     firewall = {
-      enable = true;
+      enable = false;
       allowPing = true;
       trustedInterfaces = [
         "enp1s0"
@@ -104,7 +104,7 @@ in
   ];
 
   services.duckdns = {
-    enable = true;
+    enable = false;
     domainsFile = config.age.secrets.duckDNSDomain.path;
     tokenFile = config.age.secrets.duckDNSToken.path;
   };
@@ -124,7 +124,7 @@ in
   };
 
   services.hddfancontrol = {
-    enable = true;
+    enable = false;
     settings = {
       harddrives = {
         disks = hardDrives;
@@ -141,7 +141,7 @@ in
   system.autoUpgrade.enable = true;
 
   services.mover = {
-    enable = true;
+    enable = false;
     cacheArray = hl.mounts.fast;
     backingArray = hl.mounts.slow;
     user = hl.user;
@@ -176,12 +176,12 @@ in
   ];
 
   tg-notify = {
-    enable = true;
+    enable = false;
     credentialsFile = config.age.secrets.tgNotifyCredentials.path;
   };
 
   services.adiosBot = {
-    enable = true;
+    enable = false;
     botTokenFile = config.age.secrets.adiosBotToken.path;
   };
 }
